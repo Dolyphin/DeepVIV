@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.io
@@ -7,7 +7,7 @@ import time
 from plotting import newfig, savefig
 import matplotlib.gridspec as gridspec
 from mpl_toolkits.axes_grid1 import make_axes_locatable
-
+tf.disable_v2_behavior()
 class DeepVIV:
     # Initialize the class
     def __init__(self, t, x, y,
